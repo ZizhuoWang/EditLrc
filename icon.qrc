@@ -15,5 +15,9 @@
         <file>Icon/FastForward.png</file>
         <file>Icon/Font.png</file>
         <file>Icon/music.jpg</file>
+        <file>Icon/music2.jpg</file>
+        <file>Icon/music3.jpg</file>
+        <file>Icon/music4.jpg</file>
+        <file>Icon/music5.jpg</file>
     </qresource>
 </RCC>

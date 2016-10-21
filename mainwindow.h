@@ -1,6 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+//greaterThan(QT_MAJOR_VERSION, 4):
 #include <QMainWindow>
 #include <QMultimedia>
 #include <QMediaPlayer>
@@ -13,6 +13,8 @@
 #include <QMediaPlaylist>
 #include <QStandardItemModel>
 #include <QStringListIterator>
+#include <QtWidgets>
+#include <QAction>
 
 #include "editlrc.h"
 class EditLrc;
@@ -36,9 +38,10 @@ public:
     QShortcut *shortCutForVSlider;
     QShortcut *shortCutForVSlider2;
 
-    QStandardItemModel *playListModel;
-    QStringList path;
-    QMediaPlaylist *playList;
+//    QStandardItemModel *playListModel;
+//    QStringList path;
+//    QMediaPlaylist *playList;
+    QFrame *frame;
 
     QString getTimeLabel();
 
@@ -55,7 +58,7 @@ public slots:
 
     void on_volumeChanged(int volume);
 
-//    void on_horizontalSlider_sliderMoved(int position);
+    void on_horizontalSlider_sliderMoved(int position);
 
     void on_horizontalSlider_2_sliderMoved(int position);
 
@@ -64,13 +67,26 @@ public slots:
     void volumeUp();
     void volumeDown();
 
-    void on_horizontalSlider_valueChanged(int value);
+//    void on_horizontalSlider_valueChanged(int value);
 
     void on_horizontalSlider_sliderPressed();
 
     void on_horizontalSlider_sliderReleased();
 
     void on_actionEditLrc_triggered();
+
+private slots:
+    void on_actionSkinOne_triggered();
+
+    void on_actionSkinTwo_triggered();
+
+    void on_actionSkinThree_triggered();
+
+    void on_actionSkinFour_triggered();
+
+    void on_actionSkinFive_triggered();
+
+    void on_actionShortCut_triggered();
 
 private:
     Ui::MainWindow *ui;

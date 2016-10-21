@@ -23,11 +23,14 @@ EditLrc::EditLrc(QWidget *parent) :
     connect(fastForward,SIGNAL(activated()),this,SLOT(on_actionFastForward_triggered()));
     connect(rewind,SIGNAL(activated()),this,SLOT(on_actionRewind_triggered()));
 
+
 }
 
 void EditLrc::setParentWindow(MainWindow *p)
 {
     parentWindow = p;
+    if(parentWindow->player->state()==QMediaPlayer::PlayingState)
+        ui->actionPlay->setIcon(QIcon(":/icon/Icon/Pause.png"));
 }
 
 bool EditLrc::judgeSave()
@@ -203,4 +206,36 @@ void EditLrc::on_actionFont_triggered()
 void EditLrc::modified()
 {
     this->setWindowTitle(currentName+'*');
+}
+
+void EditLrc::on_actionPlay_triggered()
+{
+    if(parentWindow->player->state()==QMediaPlayer::PlayingState)
+    {
+        parentWindow->player->pause();
+        ui->actionPlay->setIcon(QIcon(":/icon/Icon/Play.png"));
+    }
+    else
+        if(parentWindow->player->state()==QMediaPlayer::PausedState)
+        {
+            parentWindow->player->play();
+            ui->actionPlay->setIcon(QIcon(":/icon/Icon/Pause.png"));
+        }
+    else
+            if(parentWindow->player->state()==QMediaPlayer::StoppedState)
+            {
+                if(!parentWindow->player->currentMedia().isNull())
+                {
+                    parentWindow->player->play();
+                    ui->actionPlay->setIcon(QIcon(":/icon/Icon/Pause.png"));
+                }
+            }
+}
+
+void EditLrc::on_actionStop_triggered()
+{
+    parentWindow->player->stop();
+    ui->actionPlay->setIcon(QIcon(":/icon/Icon/Play.png"));
+    parentWindow->player->setMedia(QUrl::fromLocalFile(parentWindow->name));
+    parentWindow->player->pause();
 }

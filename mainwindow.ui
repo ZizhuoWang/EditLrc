@@ -103,18 +103,36 @@
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
-     <string>File</string>
+     <string>文件</string>
     </property>
     <addaction name="actionOpen"/>
    </widget>
    <widget class="QMenu" name="menuEditLrc">
     <property name="title">
-     <string>EditLrc</string>
+     <string>编辑歌词</string>
     </property>
     <addaction name="actionEditLrc"/>
    </widget>
+   <widget class="QMenu" name="menuSkin">
+    <property name="title">
+     <string>皮肤</string>
+    </property>
+    <addaction name="actionSkinOne"/>
+    <addaction name="actionSkinTwo"/>
+    <addaction name="actionSkinThree"/>
+    <addaction name="actionSkinFour"/>
+    <addaction name="actionSkinFive"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionShortCut"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEditLrc"/>
+   <addaction name="menuSkin"/>
+   <addaction name="menu"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <property name="iconSize">
@@ -141,7 +159,10 @@
      <normaloff>:/icon/Icon/Play.png</normaloff>:/icon/Icon/Play.png</iconset>
    </property>
    <property name="text">
-    <string>Play</string>
+    <string>播放/暂停</string>
+   </property>
+   <property name="toolTip">
+    <string>播放/暂停</string>
    </property>
    <property name="shortcut">
     <string>Space</string>
@@ -153,10 +174,10 @@
      <normaloff>:/icon/Icon/OpenFile.png</normaloff>:/icon/Icon/OpenFile.png</iconset>
    </property>
    <property name="text">
-    <string>Open</string>
+    <string>打开</string>
    </property>
    <property name="toolTip">
-    <string>Open a file</string>
+    <string>打开</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+O</string>
@@ -168,7 +189,10 @@
      <normaloff>:/icon/Icon/Stop.png</normaloff>:/icon/Icon/Stop.png</iconset>
    </property>
    <property name="text">
-    <string>Stop</string>
+    <string>停止</string>
+   </property>
+   <property name="toolTip">
+    <string>停止</string>
    </property>
    <property name="shortcut">
     <string>Esc</string>
@@ -180,10 +204,52 @@
      <normaloff>:/icon/Icon/EditLrc.png</normaloff>:/icon/Icon/EditLrc.png</iconset>
    </property>
    <property name="text">
-    <string>EditLrc</string>
+    <string>编辑歌词</string>
+   </property>
+   <property name="toolTip">
+    <string>编辑歌词</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionSkinOne">
+   <property name="text">
+    <string>音乐会</string>
+   </property>
+   <property name="toolTip">
+    <string>音乐会</string>
+   </property>
+  </action>
+  <action name="actionSkinTwo">
+   <property name="text">
+    <string>留声机</string>
+   </property>
+  </action>
+  <action name="actionSkinThree">
+   <property name="text">
+    <string>女孩</string>
+   </property>
+  </action>
+  <action name="actionSkinFour">
+   <property name="text">
+    <string>吉他</string>
+   </property>
+   <property name="toolTip">
+    <string>吉他</string>
+   </property>
+  </action>
+  <action name="actionSkinFive">
+   <property name="text">
+    <string>马卡龙</string>
+   </property>
+   <property name="toolTip">
+    <string>马卡龙</string>
+   </property>
+  </action>
+  <action name="actionShortCut">
+   <property name="text">
+    <string>快捷键</string>
    </property>
   </action>
  </widget>

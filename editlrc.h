@@ -57,6 +57,11 @@ public slots:
 
     void modified();
 
+private slots:
+    void on_actionPlay_triggered();
+
+    void on_actionStop_triggered();
+
 private:
     Ui::EditLrc *ui;
 };

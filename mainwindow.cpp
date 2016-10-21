@@ -34,12 +34,12 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(shortCutForVSlider,SIGNAL(activated()),this,SLOT(volumeUp()));
     connect(shortCutForVSlider2,SIGNAL(activated()),this,SLOT(volumeDown()));
 
-    QFrame *frame = new QFrame;
+    frame = new QFrame;
     frame->setObjectName("myFrame");
     frame->resize(this->size());
     frame->setStyleSheet("QFrame#myFrame{border-image:url(:/icon/Icon/music.jpg);}");
-    frame->show();
     this->setCentralWidget(frame);
+    frame->show();
 
     ui->horizontalSlider->setStyleSheet("QSlider::groove:horizontal{border: 1px solid #165708;"
                               "background: #8f8f8f;height: 3px;border-radius: 2px;"
@@ -100,7 +100,8 @@ void MainWindow::on_actionOpen_triggered()
     name = QFileDialog::getOpenFileName(this,"Open A Media File","/","Media File (*.mp3 *.ape *.wav)");
     player->setMedia(QUrl::fromLocalFile(name));
     player->play();
-    ui->actionPlay->setIcon(QIcon(":/icon/Icon/Pause.png"));
+    if(!name.isNull())
+        ui->actionPlay->setIcon(QIcon(":/icon/Icon/Pause.png"));
 }
 
 void MainWindow::on_actionStop_triggered()
@@ -165,15 +166,15 @@ void MainWindow::on_volumeChanged(int volume)
     ui->horizontalSlider_2->setValue(volume);
 }
 
-//void MainWindow::on_horizontalSlider_sliderMoved(int position)
-//{
-//    player->setPosition(position);
-//}
-
-void MainWindow::on_horizontalSlider_valueChanged(int value)
+void MainWindow::on_horizontalSlider_sliderMoved(int position)
 {
-    player->setPosition(value);
+    player->setPosition(position);
 }
+
+//void MainWindow::on_horizontalSlider_valueChanged(int value)
+//{
+//    player->setPosition(value);
+//}
 
 
 void MainWindow::on_horizontalSlider_2_sliderMoved(int position)
@@ -238,4 +239,36 @@ void MainWindow::on_actionEditLrc_triggered()
     edit->setParentWindow(this);
     edit->on_actionNew_triggered();
     edit->show();
+}
+
+void MainWindow::on_actionSkinOne_triggered()
+{
+    frame->setStyleSheet("QFrame#myFrame{border-image:url(:/icon/Icon/music.jpg);}");
+}
+
+void MainWindow::on_actionSkinTwo_triggered()
+{
+    frame->setStyleSheet("QFrame#myFrame{border-image:url(:/icon/Icon/music2.jpg);}");
+}
+
+void MainWindow::on_actionSkinThree_triggered()
+{
+    frame->setStyleSheet("QFrame#myFrame{border-image:url(:/icon/Icon/music3.jpg);}");
+}
+
+void MainWindow::on_actionSkinFour_triggered()
+{
+    frame->setStyleSheet("QFrame#myFrame{border-image:url(:/icon/Icon/music4.jpg);}");
+}
+
+void MainWindow::on_actionSkinFive_triggered()
+{
+    frame->setStyleSheet("QFrame#myFrame{border-image:url(:/icon/Icon/music5.jpg);}");
+}
+
+void MainWindow::on_actionShortCut_triggered()
+{
+    QMessageBox box;
+    box.setText("Play/Pause: Space\nStop: Esc\nEdit lyric: Ctrl+E\nRewind/Fast forward: Left/Right\nVolume up/down: Up/Down");
+    box.exec();
 }
