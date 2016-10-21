@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>Icon/EditLrc.png</file>
+        <file>Icon/Pause.png</file>
+        <file>Icon/Play.png</file>
+        <file>Icon/OpenFile.png</file>
+        <file>Icon/new_file_512px_1187338_easyicon.net.png</file>
+        <file>Icon/Stop.png</file>
+        <file>Icon/PlayList.png</file>
+        <file>Icon/Save_512px_1186318_easyicon.net.png</file>
+        <file>Icon/Save_as_512px_1186319_easyicon.net.png</file>
+        <file>Icon/Plus.png</file>
+        <file>Icon/Close.png</file>
+        <file>Icon/Rewind.png</file>
+        <file>Icon/FastForward.png</file>
+        <file>Icon/Font.png</file>
+        <file>Icon/music.jpg</file>
+    </qresource>
+</RCC>

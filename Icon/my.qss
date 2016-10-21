@@ -1,0 +1,74 @@
+QMainWindow{
+
+
+
+        background-color: rgb(0, 37, 86);
+        font: 75 12pt "Adobe Arabic";
+}
+QPushButton{
+        background-color: rgb(255, 170, 127);
+        border-color: rgb(217, 255, 193);
+    border-width:4px;
+    border-radius:10ox;
+border-style:outset;
+font:bold 14px;
+        color: rgb(235, 255, 231);
+padding:6px;
+}
+QPushButton:hover{
+        background-color: rgb(170, 255, 127);
+        border-color: rgb(199, 255, 189);
+        color: rgb(194, 255, 233);
+}
+QSlider::groove:horizontal{
+    border:0px;
+    height:4px;
+
+
+
+
+        background-color: rgb(98, 255, 122);
+}
+QSlider::sub-page:horizontal{
+
+        background-color: rgb(117, 117, 117);
+}
+QSlider::add-page:horizontal{
+
+
+        background-color: rgb(214, 209, 216);
+}
+QSlider::handle:horizontal{
+
+
+
+
+
+
+        background-color: rgb(124, 124, 124);
+    width:10px;
+
+    border-radius:5px;
+    margin:-3px 0px -3px 0px;
+}
+QMenu{
+    padding:5px;
+    background:white;
+    border:1px solid gray;
+ }
+QMenu::item{
+    padding:0px 40px 0px 30px;
+    height:25px;
+}
+QMenu::item:selected:enabled{
+    background:lightgray;
+    color:white;
+}
+QMenu::item:selected:!enabled{
+    background:transparent;
+}
+QMenu::separator{
+    height:1px;
+    background:lightgray;
+    margin:5px 0px 5px 0px;
+}

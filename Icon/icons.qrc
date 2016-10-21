@@ -1,0 +1,40 @@
+<RCC>
+    <qresource prefix="/Icons">
+        <file>OpenFile.png</file>
+        <file>Pause.png</file>
+        <file>Play.png</file>
+        <file>Stop.png</file>
+        <file>PlayList.png</file>
+        <file>Equalizer.png</file>
+        <file>skinbg.png</file>
+        <file>Image_Capture_1024px_1175135_easyicon.net.png</file>
+        <file>Lyrics.png</file>
+        <file>Save_512px_1186318_easyicon.net.png</file>
+        <file>Save_as_512px_1186319_easyicon.net.png</file>
+        <file>close_512px_1175741_easyicon.net.png</file>
+        <file>new_file_512px_1187338_easyicon.net.png</file>
+        <file>EditLrc.png</file>
+        <file>ico.png</file>
+        <file>type.png</file>
+        <file>next_115px_1201173_easyicon.net.png</file>
+        <file>back_119px_1200975_easyicon.net.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>background1.jpg</file>
+        <file>background2.jpg</file>
+        <file>background3.jpg</file>
+        <file>background4.jpg</file>
+        <file>background.jpg</file>
+        <file>background5.jpg</file>
+    </qresource>
+    <qresource prefix="/qss">
+        <file>my.qss</file>
+        <file>my1.qss</file>
+        <file>my2.qss</file>
+        <file>my3.qss</file>
+        <file>my4.qss</file>
+        <file>my5.qss</file>
+        <file>my6.qss</file>
+        <file>my7.qss</file>
+    </qresource>
+</RCC>
